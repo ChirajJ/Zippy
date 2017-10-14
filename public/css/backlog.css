@@ -1,0 +1,83 @@
+.white{
+    color: white;
+}
+
+.black{
+    color: black;
+}
+
+.bblack{
+    padding: 10px;
+    background-color: black;
+    margin: 5px;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.insert{
+    padding: 10px;
+    margin: 5px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.inline{
+    display: inline;
+}
+
+.storyCreate{
+    width: 700px;
+}
+
+.stories{
+    /*list-style-type: none;*/
+    padding: 5px;
+    border: 1px solid black;
+    margin: 5px;    
+}
+
+.stories:hover{
+    background-color: darkgray;
+    border: 2px solid darkgray;    
+}
+
+.storyList {
+    padding: 2px;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: 2px solid rgba(0, 0, 0, .2);
+}
+
+.priority1 {
+  background-color: green;
+}
+
+.priority2 {
+  background-color: orange;
+}
+
+.priority3 {
+  background-color: red;
+}
+
+.story-area {
+    background-color: white;
+    border: 5px solid black;
+    padding: 10px;
+    overflow-y: auto;
+    position: relative;
+    height: 200px;
+}
+
+.no-select{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#bar, #line{
+    background-color: currentColor;
+}

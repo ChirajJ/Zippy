@@ -1,0 +1,86 @@
+body{
+    background-color: #555;
+}
+
+.ftwenty {
+    font-size: 15px;
+}
+
+.mright {
+    margin-right: 10px;
+}
+
+.moright {
+    margin-right: 20px;
+}
+
+.mzerrobot{
+    margin-bottom: 0px;
+}
+
+.menu-area {
+    float: left;
+    position: fixed;
+    background-color: #ccc;
+    padding-left: 0;
+    width: 230px;
+    min-height: 100vh;
+    padding-top: 60px;
+    margin-left: -25px;
+}
+
+.menu-area .btn:hover {
+    color: #555;
+}
+.menu {
+    list-style-type: none;
+    vertical-align: top;
+    margin-top: 150px;
+}
+
+.menu ul {
+    padding-left: 0;
+}
+
+.menu li {
+    line-height: 3em;
+    cursor: pointer;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.menu li div {
+    display: inline-block;
+    width: 90%;
+}
+
+.menu-icon{
+    margin-right: 10px;
+}
+
+.menu-item:hover {
+    background-color: darkgrey;
+}
+
+.menu-active-indicator{
+    float: right;
+    color: #555;
+    margin-right: 0;
+    margin-top: 15px;
+}
+
+.view{
+    margin-left: 200px;
+    padding: 20px;
+    min-height: 100vh;
+    overflow: auto;
+    padding-top: 60px; 
+}
+
+.no-select{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

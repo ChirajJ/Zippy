@@ -1,0 +1,59 @@
+<div class="modal-header">
+    <div>
+        <form>
+            <div class='input-group input-group-lg'>
+                <span class='input-group-addon'>
+                    <span class='fa fa-book'></span>
+                </span>
+                <input type='text' class='form-control' placeholder='Create user story by giving a title' value='{{storyTitle}}' ng-model='uStoryTitle'>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-body">
+    <form>
+        <div class="form-group">
+            <label for="comment">Description:</label>
+            <textarea class="form-control" rows="5" id="comment" ng-model='uDesc'></textarea>
+        </div>
+    </form>
+    <div>
+        <form>
+            <div class='input-group input-group-lg'>
+                <input type='text' class='form-control' placeholder='Story points' ng-model='uStoryPoints'>
+            </div>
+        </form>
+    </div>
+    <p style='margin-top: 10px;'>Select the priority</p>
+    <form>
+        <label class="radio-inline">
+            <input type="radio" name="optradio" value='1' ng-model='uOptradio'>Low
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio" value='2' ng-model='uOptradio'>Medium
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio" value='3' ng-model='uOptradio'>High
+        </label>
+    </form>
+    <p style='margin-top: 10px;'>Completion Status</p>
+    <form>
+        <label class="radio-inline">
+            <input type="radio" name="optradio1" value='1' ng-model='uOptradio1'>New
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio1" value='2' ng-model='uOptradio1'>In-Progress
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio1" value='3' ng-model='uOptradio1'>Completed
+        </label>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button"
+    ng-click="update()">Update</button>
+    <button class="btn btn-danger" type="button"
+    ng-click="delete()">Delete</button>
+    <button class="btn btn-warning" type="button"
+    ng-click="close()">Cancel</button>
+</div>

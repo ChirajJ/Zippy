@@ -1,0 +1,36 @@
+<h1 style='color: white;'>Release Board</h1>
+<hr>
+<div>
+    <div class='row'>
+        <div class='col-md-10 col-md-offset-1'>
+            <label for='releaseSelect' style='color: white;'>Select the release</label>
+            <select style='margin:0px 15px 15px' id='releaseSelect'  ng-model='releaseNo' ng-change= 'loadBoard()'>
+                <option>--select--</option>
+                <option>R1.0</option>
+                <option>R2.0</option>
+            </select>
+        </div>
+    </div>
+    <div class='row' ng-show='boardFlag' style='margin-top: 30px;'>
+        <div class='col-md-10 col-md-offset-1'>
+            <table style='color: white;background-color: black;' class='table'>
+                <thead>
+                    <tr>
+                        <th style='color: red'>New</th>
+                        <th style='color: orange'>In-Progress</th>
+                        <th style='color: green'>Closed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat='x in stories'>
+                        <td ng-repeat='y in [1,2,3]'>
+                            <i ng-if = 'x.status == y'  class='storyList {{"priority"+(4 - x.status)}}'>
+                                {{x.title}}
+                            </i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

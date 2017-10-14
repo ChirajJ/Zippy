@@ -1,0 +1,27 @@
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+
+.dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
+
+ul.area li.placeholder {
+  position: relative;
+  /** More li styles **/
+}
+ol.example li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/
+}
+
+.backlog-story-area {
+    background-color: white;
+    border: 5px solid black;
+    padding: 10px;
+    overflow-y: auto;
+    position: relative;
+    height: 150px;
+}

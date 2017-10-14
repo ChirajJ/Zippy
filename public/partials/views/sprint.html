@@ -1,0 +1,70 @@
+<div id='divId'>
+<div>
+    <div class='row'>
+        <div class='col-md-1 col-md-offset-11'>
+            <button id='save' class="btn btn-primary" type="button" style='margin-bottom: 15px;' ng-click=save()>Save</button>
+        </div>
+    </div>
+</div>
+<div style='border: 2px solid;padding: 5px;'>
+    <div class='row'>
+        <h4 style='color:white;padding-left:15px'>Release Stack</h4>
+        <select style='margin:0px 15px 15px' id='releaseSelect' ng-model='releaseNo' ng-change='loadRelData()'>
+            <option>R1.0</option>
+            <option>R2.0</option>
+        </select>
+        <div ng-init='loadRelData()' class='col-md-10 col-md-offset-1'>
+
+            <div ng-show='rStoryFlag'>
+                <div class='backlog-story-area'>
+                    <ul id='area1' class="area" style='border:1px solid;padding: 2px;'>
+                        <li style='list-style-type: none;' ng-repeat='x in rStories' class='stories no-select items1' ng-dblclick='viewStory(x.title)' value='{{x.title}}'>
+                            <i class='storyList {{"priority"+x.priority}}'></i>
+                            {{x.title}}
+                        </li>
+                    </ul>
+                </div>                
+            </div>
+            <div ng-show='!rStoryFlag'>
+                <h2>Loading...</h2>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class='row'>
+        <h4 style='color:white;padding-left:15px'>Sprint Stack</h4>
+        <select style='margin:0px 15px 15px' id='sprSelect' ng-model='sprintNo' ng-change='loadSprData()'>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <div ng-init='loadSprData()' class='col-md-10 col-md-offset-1'>
+
+            <div ng-show='sprintFlag'>
+                <div class='backlog-story-area'>
+                    <ul id='area2' class="area" style='border:1px solid;padding: 2px;'>
+                        <li style='list-style-type: none;' ng-repeat='x in sprStories' class='stories no-select items2' ng-dblclick='viewStory(x.title)' value='{{x.title}}'>
+                            <i class='storyList {{"priority"+x.priority}}'></i>
+                            {{x.title}}
+                        </li>
+                    </ul>
+                </div>                
+            </div>
+            <div ng-show='!sprintFlag'>
+                <h2>Loading...</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('#area1, #area2').sortable({
+                connectWith: '#area1, #area2',
+                helper: 'clone',
+                revert: 'invalid',
+                appendTo: 'body'
+            });
+        });
+    </script>
+</div>
+</div>

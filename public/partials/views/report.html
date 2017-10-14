@@ -1,0 +1,41 @@
+<h1 style='color: white;'>let's Report</h1>
+<hr>
+<div>
+    <div class='row'>
+        <div class="col-md-10 col-md-offset-1">
+            <label for='reportSelect' style='color: white;'>Select the report type</label>
+            <select style='margin:0px 15px 15px' id='reportSelect'  ng-model='reportType' ng-change= 'loadReport()'>
+                <option>--select--</option>
+                <option>Sprint report</option>
+                <option>Velocity report</option>
+            </select>
+        </div>
+    </div>
+    <div class='row' style='margin-top: 30px;'>
+        <div class='col-md-10 col-md-offset-1'>
+            <div ng-show='sprFlag'>
+                <label for='sprSelect' style='color: white;'>Select the sprint for Burndown Chart</label>
+                <select style='margin:0px 15px 15px' id='sprSelect'  ng-model='sprNo' ng-change= 'loadSpr()'>
+                    <option selected>--select--</option>
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+                <div ng-show='sprDataFlag' style='padding: 5px; background-color: white;'>
+                    <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+                    </canvas>
+                </div>
+            </div>
+            <div ng-show='velFlag'>
+                    <div style='padding: 5px; background-color: white;'>
+                        <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels"> chart-series="series"
+                        </canvas>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>Zippy</title>
+        <% include partials/styleIncludes.ejs %>
+        <% include partials/jsIncludes.ejs %>
+    </head>
+    <body class='ftwenty' name='<%= session.username%>'>
+        <input type='hidden' ng-model='uname' value='<%= session.username%>'>
+        <div>
+            <my-framework name='<%= session.username%>'>
+                <app-dir uname='<%= session.username%>'></app-dir>
+                <my-menu>
+                    <my-menu-item label='Backlog' icon='fa-align-left' route='backlog'></my-menu-item>
+                    <my-menu-item label='Release Backlog' icon='fa-align-justify' route='release-backlog'></my-menu-item>
+                    <my-menu-item label='Sprint'  icon='fa-list' route='sprint'></my-menu-item>
+                    <my-menu-item label='Release'  icon='fa-rocket' route='release'></my-menu-item>
+                    <my-menu-item label='Report'  icon='fa-area-chart' route='report'></my-menu-item>
+                </my-menu>
+            </my-framework>
+        </div>        
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<h2 style='color:white'>Product Backlog</h2>
+<div class='row' style='margin-top: 50px;'>
+    <div>
+        <div class='col-md-8 col-md-offset-2'>
+            <form>
+                <div class='input-group input-group-lg'>
+                    <span class='input-group-addon'>
+                        <span class='fa fa-book'></span>
+                    </span>
+                    <input type='text' class='form-control' placeholder='Create user story by giving a title' ng-model='storyTitle'>
+                    <div class='input-group-btn'>
+                        <button class='btn btn-default' type="submit" ng-click=open()>Add !</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>
+<hr>
+<div class='row'>    
+    <h2 style='color:white;padding-left:15px'>Current Stories</h2>
+    <div ng-init='loadData()' class='col-md-10 col-md-offset-1'>
+        
+        <div ng-show='storyFlag'>
+            <div class='story-area' ui-sortable="sortableOptions">
+                <div ng-repeat='x in stories' class='stories no-select' ng-dblclick='viewStory(x.title)'>
+                    <i class='storyList {{"priority"+x.priority}}'></i>
+                    {{x.title}}
+                </div>
+            </div>
+        </div>
+        <div ng-show='!storyFlag'>
+            <h2>Loading...</h2>
+        </div>
+    </div>
+</div>
